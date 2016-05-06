@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Lê Viết Khang</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/setup.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="index.css"/>
+	</head>
+
+	<body style="background-color: 	#C0C0C0">
+
+
+		<div class = "row"  style="background: #696969; height: 50px" >
+			<div class="input-group col-md-4 container" style="margin-top: 8px">
+	            <input type="text" class="form-control" placeholder="Search for people, jobs, companies, and more...">
+	            <span class="input-group-btn">
+	                <button class="btn btn-info" type="button">
+	                    <i class="glyphicon glyphicon-search"></i>	                    
+	                </button>	        
+	            </span>	    
+	                  
+	        </div>
+        </div>
+        <div class="responsive-nav" style="position: static; width: auto; background-color: #000000"></div>
+
+		<div ng-app="myApp" style="width: 1000px; margin: 0px auto; background-color: white">
+			<div ng-controller="myController">
+				<div class="row container" >
+					<image class="col-sm-4" style ="height: 200px; width:1000px;" src="{{myData.IMAGES.Cover}}">
+
+				</div>
+
+				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
+					<image class="col-sm-4" style ="height: 200px; width:200px;" src="{{myData.IMAGES.Avatar}}">
+					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom: 10px;">
+
+						<div class = "name" ng-mouseover="EditNameBtn=true" ng-mouseleave="EditNameBtn=false">
+							<div class="edit" ng-show="EditName">
+								<form>
+									<input type="text" ng-model="newName"/>
+									<input type="submit" value="OK" ng-click="changeName(newName);EditName=false;"/>
+									<input type="submit" value="Cancel" ng-click="EditName=false"/>
+								</form>
+							</div>
+							<h2 id="name" > <strong>{{myData.PROFILE.Name}}</strong></h2>
+							<button ng-show="EditNameBtn" ng-click="EditName=true">Edit</button>
+						</div>
+
+						<div class ="row">
+							<div class ="headline" ng-mouseover="EditHeadlineBtn=true" ng-mouseleave="EditHeadlineBtn=false">
+								<div class="edit2" ng-show="EditHeadline">
+								<form>
+									<input id ="2" type="text" ng-model="newHeadline"/>
+									<input id = "2" type="submit" value="OK" ng-click="changeHeadline(newHeadline);EditHeadline=false;"/>
+									<input id = "2" type="submit" value="Cancel" ng-click="EditHeadline=false"/>
+								</form>
+								</div>
+
+								<div class="col-sm-2 text-muted">Headline: </div>
+								<div id ="healine" class="col-sm-10">{{myData.PROFILE.Headline}}
+									<button ng-show="EditHeadlineBtn" ng-click="EditHeadline=true">Edit</button>
+								</div>
+							</div>
+						</div>
+
+						<div class ="row">
+							<div class = "job" ng-mouseover="EditjobBtn=true" ng-mouseleave="EditjobBtn=false">
+								<div class="edit2" ng-show="Editjob">
+									<form>
+										<input type="text" ng-model="newjob"/>
+										<input type="submit" value="OK" ng-click="changejob(newjob);Editjob=false;"/>
+										<input type="submit" value="Cancel" ng-click="Editjob=false"/>
+									</form>
+								</div>
+							<div class="col-sm-2 text-muted">Job: </div>
+							<div id="job" class="col-sm-10">{{myData.PROFILE.MyWork}}
+								<button ng-show="EditjobBtn" ng-click="Editjob=true">Edit</button>
+							</div>
+							</div>
+						</div>
+
+						<div class ="row">
+							<div class ="education" ng-mouseover="EditEducationBtn=true" ng-mouseleave="EditEducationBtn=false">
+								<div class="edit2" ng-show="EditEducation">
+								<form>
+									<input id ="2" type="text" ng-model="newEducation"/>
+									<input id = "2" type="submit" value="OK" ng-click="changeEducation(newEducation);EditEducation=false;"/>
+									<input id = "2" type="submit" value="Cancel" ng-click="EditEducation=false"/>
+								</form>
+								</div>
+
+							<div class="col-sm-2 text-muted">Education: </div> 
+							<div id ="education" class="col-sm-10">{{myData.PROFILE.Education}}
+								<button ng-show="EditEducationBtn" ng-click="EditEducation=true">Edit</button>
+							</div>
+						</div>	
+						</div>
+
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Email: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Email}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Phone: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Phone}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">National: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Country}}</div>
+						</div>
+					</div>
+					</br></br>
+				</div>
+				<div class="clearfix"></div>
+				
+				<div style="width: 100%; height:20px; background-color: #c0c0c0; color:#c0c0c0; margin-top:5px; margin-bottom:5px;"> </div>
+
+				<div class="row container" style="width: 135px; height: 40px; background-color: black; margin-left: 0px; margin-top: -5px">
+					<h4 style="color: white; width: 108px"> <strong>Background</strong> </h4>
+				</div>
+				</br>
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.summaryA}}">
+					<span><strong>Summary</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.SUMMARY.Summary1}}</li>
+						<li>{{myData.SUMMARY.Summary2}}</li>
+						<li>{{myData.SUMMARY.Summary3}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.experienceA}}">
+					<span><strong>Experience</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.EXPERIENCE.Experience}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.projectA}}">
+					<span><strong>Project</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.PROJECT.project1}}</li>
+						<li>{{myData.PROJECT.project2}}</li>
+						<li>{{myData.PROJECT.project3}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				
+				<hr/>
+
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.skillA}}">
+					<span><strong>Skills</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.SKILLS.skill1}}</li>
+						<li>{{myData.SKILLS.skill2}}</li>
+						<li>{{myData.SKILLS.skill3}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+
+				<hr/>
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 35px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.educationA}}">
+					<span><strong>Education</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.EDUCATION.education}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+	    </div>
+		
+	</body>
+</html>

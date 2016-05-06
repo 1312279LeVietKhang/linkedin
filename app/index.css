@@ -1,0 +1,17 @@
+#name{
+	display:inline-block;
+}
+
+#headline{
+	display: inline-block;
+}
+.edit{
+	position:absolute;
+	left:260px;
+	padding: 10px;
+}
+
+.edit2{
+	position: absolute;;
+	left: 380px;
+}

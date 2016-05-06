@@ -1,0 +1,54 @@
+{
+	"PROFILE":
+	{
+		"Headline":"IT in University of Sciences ",
+		"Name":"Lê Viết Khang",
+		"Country":"VietNamese",
+		"MyWork":"Information Technology",
+		"Email":"lvklvk1595@gmail.com",
+		"Phone":"+84964666982",
+		"Education":"Student at University of Sciences"
+	}, 
+
+	"SUMMARY":
+	{
+		"Summary1": "Became a student University of Science 2013",
+		"Summary2": "Studying about Software Technology",
+		"Summary3": "Hobby: watching movie, game, read comics..."
+	},
+
+	"EXPERIENCE":
+	{
+		"Experience": "C#, C/C++, Java, Html ... "
+	},
+
+	"PROJECT":
+	{
+		"project1": "LTUDWeb",
+		"project2": "Java",
+		"project3": "PTUDMobile"
+	},
+
+	"SKILLS":
+	{
+		"skill1": "Teamwork",
+		"skill2": "Search",
+		"skill3": "Talk"
+	},
+
+	"EDUCATION":
+	{
+		"education": "University of Sciences"
+	},
+
+	"IMAGES":
+	{
+		"Avatar":"images/lvk.jpg",
+		"Cover": "images/background.jpg",
+		"educationA": "images/education.jpg",
+		"summaryA": "images/summary.jpg",
+		"experienceA": "images/experience.png",
+		"projectA": "images/Project.png",
+		"skillA": "images/skill.png"
+	}
+}
