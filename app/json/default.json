@@ -29,6 +29,13 @@
 		"project3": "PTUDMobile"
 	},
 
+	"SKILLS":
+	{
+		"skill1": "Teamwork",
+		"skill2": "Search",
+		"skill3": "Talk"
+	},
+
 	"EDUCATION":
 	{
 		"education": "University of Sciences"
@@ -37,6 +44,11 @@
 	"IMAGES":
 	{
 		"Avatar":"images/lvk.jpg",
-		"Cover": "images/background.jpg"
+		"Cover": "images/background.jpg",
+		"educationA": "images/education.jpg",
+		"summaryA": "images/summary.jpg",
+		"experienceA": "images/experience.png",
+		"projectA": "images/Project.png",
+		"skillA": "images/skill.png"
 	}
 }
